@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Ideias para Livros - Encontre sua Próxima História de Sucesso</title>
+    <meta name="description" content="Gere ideias lucrativas para seus livros na Amazon KDP. Ferramenta gratuita que analisa o mercado e sugere tramas com alto potencial de vendas.">
+    <meta name="keywords" content="ideias para livros, amazon kdp, escrever livro, gerador de enredo, trama de livro, ficção, romance, suspense">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>🚀 Gerador de Ideias para Livros</h1>
+            <p class="subtitle">Descubra sua próxima história de <strong>sucesso</strong> baseada em dados reais do mercado</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="number">10.000+</span>
+                    <span class="label">Ideias Geradas</span>
+                </div>
+                <div class="stat">
+                    <span class="number">500+</span>
+                    <span class="label">Autores Ajudados</span>
+                </div>
+                <div class="stat">
+                    <span class="number">95%</span>
+                    <span class="label">Taxa de Satisfação</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="generator-section">
+            <div class="generator-card">
+                <h2>✨ Gere Sua Ideia Lucrativa</h2>
+                <p>Selecione suas preferências e nossa IA criará uma ideia baseada em análise de mercado:</p>
+                
+                <form id="ideaForm" class="generator-form">
+                    <div class="form-group">
+                        <label for="genero">📚 Gênero Principal:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Escolha um gênero...</option>
+                            <option value="romance">Romance</option>
+                            <option value="ficcao-cientifica">Ficção Científica</option>
+                            <option value="fantasia">Fantasia</option>
+                            <option value="suspense">Suspense/Thriller</option>
+                            <option value="misterio">Mistério</option>
+                            <option value="drama">Drama</option>
+                            <option value="aventura">Aventura</option>
+                            <option value="horror">Horror</option>
+                            <option value="historico">Histórico</option>
+                            <option value="contemporaneo">Contemporâneo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subgenero">🎯 Subgênero:</label>
+                        <select id="subgenero" name="subgenero" required>
+                            <option value="">Primeiro escolha o gênero...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tom">🎭 Tom da História:</label>
+                        <select id="tom" name="tom" required>
+                            <option value="">Escolha o tom...</option>
+                            <option value="sombrio">Sombrio e Intenso</option>
+                            <option value="leve">Leve e Divertido</option>
+                            <option value="epico">Épico e Grandioso</option>
+                            <option value="intimista">Intimista e Emocional</option>
+                            <option value="misterioso">Misterioso e Intrigante</option>
+                            <option value="inspirador">Inspirador e Motivacional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publico">👥 Público-Alvo:</label>
+                        <select id="publico" name="publico" required>
+                            <option value="">Escolha o público...</option>
+                            <option value="jovem-adulto">Jovem Adulto (16-25 anos)</option>
+                            <option value="adulto">Adulto (25-45 anos)</option>
+                            <option value="adulto-maduro">Adulto Maduro (45+ anos)</option>
+                            <option value="new-adult">New Adult (18-30 anos)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="generate-btn" id="generateBtn">
+                        <span class="btn-text">🎲 GERAR IDEIA LUCRATIVA</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div id="resultSection" class="result-section" style="display: none;">
+                <div class="result-card">
+                    <h3>🎉 Sua Ideia de Sucesso Está Pronta!</h3>
+                    <div id="ideaResult" class="idea-result"></div>
+                    
+                    <div class="upgrade-section">
+                        <div class="upgrade-card">
+                            <h4>🚀 Quer Maximizar Suas Chances de Sucesso?</h4>
+                            <p>Esta ideia tem <strong>alto potencial</strong>, mas uma ideia é apenas 10% do trabalho. Para realmente <strong>decolar suas vendas</strong>, você precisa de:</p>
+                            
+                            <ul class="benefits-list">
+                                <li>✅ <strong>Análise completa de concorrência</strong> - Veja exatamente o que está funcionando</li>
+                                <li>✅ <strong>Palavras-chave exatas</strong> para usar no título e descrição</li>
+                                <li>✅ <strong>Estratégia de preço ideal</strong> baseada em dados reais</li>
+                                <li>✅ <strong>Análise de capas vencedoras</strong> - O que atrai mais cliques</li>
+                                <li>✅ <strong>Pontos fortes e fracos</strong> segundo leitores reais</li>
+                                <li>✅ <strong>Roadmap completo</strong> para lançamento</li>
+                            </ul>
+                            
+                            <div class="price-section">
+                                <div class="price">
+                                    <span class="old-price">De R$ 197</span>
+                                    <span class="new-price">Por apenas R$ 47</span>
+                                </div>
+                                <p class="price-note">💡 <strong>Oferta limitada:</strong> Primeiros 50 relatórios com 76% de desconto</p>
+                            </div>
+                            
+                            <a href="#" id="buyButton" class="buy-btn">
+                                🎯 QUERO O DOSSIÊ COMPLETO
+                                <small>Entrega imediata por email</small>
+                            </a>
+                            
+                            <div class="guarantee">
+                                <p>🛡️ <strong>Garantia de 7 dias:</strong> Se não ficar satisfeito, devolvemos 100% do seu dinheiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="testimonials">
+            <h3>💬 O que nossos autores dizem:</h3>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Usei a ferramenta e em 3 meses meu livro estava no top 10 da categoria. O dossiê foi fundamental!"</p>
+                    <cite>- Marina S., Autora de Romance</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Finalmente consegui escolher um nicho lucrativo. Meu primeiro livro já vendeu mais de 1000 cópias."</p>
+                    <cite>- Carlos R., Autor de Suspense</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"A análise de mercado me poupou meses de pesquisa. Recomendo para qualquer autor sério."</p>
+                    <cite>- Ana P., Autora de Fantasia</cite>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Gerador de Ideias para Livros. Todos os direitos reservados.</p>
+            <p>Transformando ideias em best-sellers desde 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

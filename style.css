@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header/Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.stat .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.stat .label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Generator Section */
+.generator-section {
+    margin-bottom: 60px;
+}
+
+.generator-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.generator-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4a5568;
+    text-align: center;
+}
+
+.generator-card > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.generator-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.generate-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Result Section */
+.result-section {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.result-card h3 {
+    font-size: 1.8rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.idea-result {
+    background: #f8fafc;
+    border-left: 5px solid #667eea;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.idea-result h4 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.idea-result p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.idea-result .genre-info {
+    background: #e6fffa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #38b2ac;
+}
+
+.idea-result .market-analysis {
+    background: #fff5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #f56565;
+}
+
+/* Upgrade Section */
+.upgrade-section {
+    margin-top: 40px;
+}
+
+.upgrade-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.upgrade-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.upgrade-card > p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.benefits-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    list-style: none;
+}
+
+.benefits-list li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+.price-section {
+    margin: 30px 0;
+}
+
+.price {
+    margin-bottom: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    opacity: 0.7;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.new-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.price-note {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.buy-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.buy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+.buy-btn small {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.guarantee {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+/* Testimonials */
+.testimonials {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.testimonials h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.testimonial {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    font-weight: 600;
+    color: #667eea;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    opacity: 0.8;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .stats {
+        gap: 20px;
+    }
+    
+    .stat {
+        padding: 15px;
+        min-width: 120px;
+    }
+    
+    .generator-card,
+    .result-card,
+    .testimonials {
+        padding: 25px;
+    }
+    
+    .upgrade-card {
+        padding: 30px 20px;
+    }
+    
+    .new-price {
+        font-size: 2rem;
+    }
+    
+    .buy-btn {
+        padding: 18px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .hero {
+        padding: 40px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .generator-card,
+    .result-card,
+    .testimonials {
+        padding: 20px;
+    }
+    
+    .form-group select {
+        padding: 12px;
+    }
+    
+    .generate-btn {
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+}
+
